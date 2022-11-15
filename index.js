@@ -26,9 +26,9 @@ app.post('/push-notification', (req, res)=>{
 });
 
 app.get('/', (req, res)=>{
-    console.log('hi welcome!');
+    console.log('hi welcome to Unklab Student Tracker API!');
     res.send({
-        message: "hi welcome!"
+        message: "hi welcome to Unklab Student Tracker API!"
     })
 })
 
