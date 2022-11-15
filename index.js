@@ -15,7 +15,7 @@ app.post('/push-notification', (req, res)=>{
     .then((result) => {
         if(result){
             res.send({
-                message: "Notification was pushed!!!"
+                message: "Notification was pushed!!!!!"
             })
         }
     }).catch((err) => {
