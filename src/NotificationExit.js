@@ -21,8 +21,8 @@ admin.messaging().send({
     },
     android: {
         notification: {
-            body: "Student entered UNKLAB",
-            title: "Entered Signal",
+            body: "Student exited UNKLAB",
+            title: "Exited Signal",
             color: "#ffff00",
             priority: "high",
             sound: 'default',

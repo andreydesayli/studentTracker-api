@@ -3,13 +3,35 @@ var app = express();
 
 app.use(express.json());
 
-app.post('/push-notification', (req, res)=>{
+app.post('/push-notification/entered', (req, res)=>{
     module.exports.token = `${req.body.token}`;
-    var notification = require('./src/Notification')
     
     async function pushNotif(){
-        require('./src/Notification')
-        return notification;
+        // require('./src/Notification')
+        return notification = require('./src/Notification')
+        // return notification;
+    }
+    pushNotif()
+    .then((result) => {
+        if(result){
+            res.send({
+                message: "Notification was pushed!!!!!"
+            })
+        }
+    }).catch((err) => {
+        res.status(404).send({
+            message: err.message
+        })
+    });
+});
+
+app.post('/push-notification/exited', (req, res)=>{
+    module.exports.token = `${req.body.token}`;
+    
+    async function pushNotif(){
+        // require('./src/Notification')
+        return notification = require('./src/NotificationExit')
+        // return notification;
     }
     pushNotif()
     .then((result) => {
